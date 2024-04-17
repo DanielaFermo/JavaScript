@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Velocidade</title>
+  </head>
+  <body>
+    <h1>Sistema de Multas</h1>
+    Velocidade do carro :<input type="number" name="txtvel" id="txtvel"/> km/h
+    <input type="button" value="Verificar" onclick="calcular()" />
+    <div id="resposta"></div>
+    <script>
+      function calcular() {
+        var velocidade = window.document.getElementById("txtvel");
+        var resposta = window.document.getElementById("resposta");
+        var velocidadeNumber = Number(velocidade.value);
+        resposta.innerHTML = `Sua velocidade actual é de <strong>${velocidadeNumber}</strong> km/h`;
+        if(velocidadeNumber > 60 ){
+            resposta.innerHTML +=`Vocé está <strong>Multado<strong> por estar dirigindo acima da velocidade permitida `
+        }
+        resposta.innerHTML += `<p>Dirija sempre com cinto de segurança!<p>`
+      }
+    </script>
+  </body>
+</html>

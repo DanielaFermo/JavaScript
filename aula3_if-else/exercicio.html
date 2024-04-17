@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nacionalidade</title>
+    <style>
+      body{
+         background:linear-gradient(to right, rgb(92, 92, 224) , rgb(15, 85, 216));
+         color: white;
+      }
+      #checar{
+         width: 60px;
+         height: 60px;
+         color: rgb(62, 62, 134);
+         border-radius: 5px;
+         box-shadow: 5px 5px 5px rgba(16, 134, 198, 0.487);
+         margin-left: 30px;
+      }
+      #nacionalidade{
+         width: 150px;
+         height: 30px;
+         border-radius: 5px;
+         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.487);
+      }
+      #checar:hover{
+         background:linear-gradient(to right  , rgb(11, 33, 70), rgb(8, 61, 222) );
+         color: white;
+      }
+   
+    </style>
+  </head>
+  <body>
+    <h1>Nacionalidade</h1>
+    Digite aqui a sua nacionalidade : <input
+      type="text"
+      name="nacionalidade"
+      id="nacionalidade"
+    />
+
+    <input type="button" id="checar" value="checar" onclick="checar()" />
+    <div id="resposta"></div>
+    <script>
+
+      function checar() {
+         var nacionalidadeId = window.document.getElementById("nacionalidade");
+         var nacionalidade =nacionalidadeId.value 
+      var resposta = window.document.getElementById("resposta");
+      resposta.innerHTML = `Aguarde...`;
+        if (nacionalidade == "Brasil") {
+          resposta.innerHTML = `Vocé é Brasileiro`
+        } else {
+          resposta.innerHTML = `Vocé nao é Brasileiro`;
+        }
+      }
+   
+    </script>
+  </body>
+</html>
